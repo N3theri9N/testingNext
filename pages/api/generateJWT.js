@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 
 const userKey = "b453dfe3-2d8a-4528-82aa-8ce52f0568b4";
 const payload = {
-  appId: 'https://testing-next-zeta.vercel.app/', 
+  appId: 'https://testing-next-zeta.vercel.app', 
   platform: "web"
 };
 
