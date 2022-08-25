@@ -1,0 +1,121 @@
+<!-- eslint-disable @next/next/no-sync-scripts -->
+<!-- <html>
+<body>
+<div id="AILivePlayer"></div>
+<script src="http://aihuman.deepbrainai.io/js/aiLive/aiLive.min.js"></script>
+<script>
+  const AILivePlayer = document.getElementById("AILivePlayer");
+  const AI_LIVE = new AIPlayer(AILivePlayer);  
+
+  async function requestClientToken() {
+    const result = await makeRequest("GET", "/api/generateJWT"); // TODO: Server
+    // Success
+    DATA.appId = result.appId;
+    DATA.clientToken = result.token;
+ // ...
+  }
+
+  async function generateVerifiedToken() {
+    const result = await AI_LIVE.generateToken({ appId: DATA.appId, token: DATA.clientToken });
+    if (result?.succeed) {
+    DATA.verifiedToken = result.token;
+    DATA.tokenExpire = result.tokenExpire;
+    DATA.defaultAI = result.defaultAI;
+  }
+
+  await AI_LIVE.init({
+    AIModelInfo: { ai_name: DATA.defaultAI.ai_name, zIndex: 0, size: 1.0,
+    left: 0, top: 0, speed: 1.0 },
+    AppInfo: { appId: DATA.appId, token: DATA.verifiedToken }
+  });
+
+  function speak(text){
+    AI_LIVE.send("Nice to see you!");
+  }
+}
+</script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AIPlayer JavaScript SDK Quick Start</title>
+  </head>
+<style>
+ html, body, #AILivePlayer {
+ height: 100%;
+ }
+</style>
+<body style="height:100%">
+<div style="display: none; width: fit-content;" id="AIPlayerTexts">
+  <button onclick="speak(this.innerHTML)">How are you?</button>
+  <button onclick="speak(this.innerHTML)">Nice to see you!</button>
+</div>
+<div id="AILivePlayer">
+
+</div>
+<script src="http://aihuman.deepbrainai.io/js/aiLive/aiLive.min.js"></script>
+<script>
+  const AILivePlayer = document.getElementById("AILivePlayer");
+  const AI_LIVE = new AIPlayer(AILivePlayer);
+  const DATA = {};
+  initSample();
+  async function initSample() {
+    initAIPlayerEvent();
+
+    await generateClientToken();
+    await generateVerifiedToken();
+    await AI_LIVE.init({
+      AIModelInfo: { ai_name: DATA.defaultAI.ai_name, zIndex: 0, size: 1.0,
+      left: 0, top: 0, speed: 1.0 },
+      AppInfo: { appId: DATA.appId, token: DATA.verifiedToken },
+    });
+  }
+  async function generateClientToken() {
+    const result = await makeRequest("GET", "/api/generateJWT"); // TODO: Server generateJWT request address input
+    // Success
+    DATA.appId = result.appId;
+    DATA.clientToken = result.token;
+    // ...
+    
+  }
+
+  async function generateVerifiedToken() {
+    const result = await AI_LIVE.generateToken({ appId: DATA.appId, token: DATA.clientToken });
+    if (result?.succeed) {
+      DATA.verifiedToken = result.token;
+      DATA.tokenExpire = result.tokenExpire;
+      DATA.defaultAI = result.defaultAI;
+    }
+  }
+  function initAIPlayerEvent() {
+    AI_LIVE.onAIPlayerStateChanged = function (state) {
+    if (state === "playerLoadComplete")
+      document.getElementById("AIPlayerTexts").style.display = "grid";
+    };
+  }
+
+  function speak(text) {
+    AI_LIVE.send(text);
+  }
+
+  // sample Server request function
+  async function makeRequest(method, url, params) {
+    const options = { method, headers: { "Content-Type": "application/json; charSet=utf-8" } };
+    if (method === "POST") options.body = JSON.stringify(params || {});
+    return await fetch(url, options)
+    .then((response) => response.json())
+    .then((data) => data)
+    .catch((error) => {
+      console.error("** An error occurred during the fetch", error);
+      showPop("Generate Client Token Error", `no client token can be enerated.`);
+      return undefined;
+    });
+  }
+
+</script>
+</body>
+</html>
