@@ -26,8 +26,8 @@ async function initSample() {
 // =========================== AIPlayer Setup ================================ //
 
 async function generateClientToken() {
-//  const result = await makeRequest("GET", "https://v75kuduosg.execute-api.ap-northeast-2.amazonaws.com/test/"); // TODO: Server generateJWT request address input
-  const result = await makeRequest("GET", "/api/generateJWT"); // TODO: Server generateJWT request address input
+  const result = await makeRequest("GET", "https://v75kuduosg.execute-api.ap-northeast-2.amazonaws.com/test/"); // TODO: Server generateJWT request address input
+  // const result = await makeRequest("GET", "/api/generateJWT"); // TODO: Server generateJWT request address input
   // TODO: response handling
   // Success
   DATA.appId = result.appId;
