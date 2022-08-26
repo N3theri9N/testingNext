@@ -9,7 +9,7 @@ async function initSample() {
   initAIPlayerEvent();
 
   // 테스트할때 쓰는 것이므로 메뉴얼에 추가하면 X
-  //AI_LIVE.setConfig({ midServer: "https://devmid.deepbrainai.io", authServer: "http://localhost:3001" });
+  AI_LIVE.setConfig({ midServer: "https://devmid.deepbrainai.io", authServer: "https://devaihuman.deepbrainai.io" });
 
   await generateClientToken();
   await generateVerifiedToken();
