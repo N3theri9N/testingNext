@@ -1,0 +1,52 @@
+<!-- quickStart.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AIPlayer JavaScript SDK Quick Start</title>
+  </head>
+  <style>
+    html, body, #AILivePlayer {
+      height: 100%;
+    }
+
+    .RightLayout {
+      width: 20vw;
+      height: 100%;
+      min-width: 300px;
+      position: fixed;
+      bottom: 0;
+      right: 5%;
+    }
+
+    .InfoContainer {
+      height: 27vh;
+      min-height: 150px;
+      padding-bottom: 3vh;
+    }
+
+    .demoList{
+      width: 100%;
+      margin-top: 5vh;
+      height: 3vh;
+      min-height: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .demoList > button {
+      width: 6vw;
+    }
+</style>
+  <body style="height:100%">
+    <div style="display: none; width: fit-content;" id="AIPlayerTexts">
+      <button onclick="speak(this.innerHTML)">How are you?</button>
+      <button onclick="speak(this.innerHTML)">Nice to see you!</button>
+    </div>
+    <div id="AILivePlayer"></div>
+  </body>
+
+  <!-- 웹 페이지에 JavaScript SDK 포함하기 -->
+  <script src="https://oh-aihuman.deepbrainai.io/js/aiLive/aiLive.min.js"></script>
+  <script type="text/javascript" src="./quickStart.js"></script>
+</html>
