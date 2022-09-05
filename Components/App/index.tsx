@@ -1,7 +1,12 @@
+import { NextPage } from 'next';
 import React from 'react';
 
-const App = () : JSX.Element => {
-  return <h2>Hello World!</h2>
+interface AppProps {
+  text : string
+}
+
+const App: NextPage<AppProps> = ( { text = "HelloWorld" } ) : JSX.Element => {
+  return <h2>{text}</h2>
 }
 
 export default App;
