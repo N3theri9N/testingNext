@@ -1,11 +1,15 @@
-import App from "../src/App";
-import Movie from "../src/Movie";
+import App from "../Components/App";
+import Navigation from "../Components/Navigation";
+import Head from 'next/head'
 
 export default function Home() {
   return (
-    <div>
+    <>
+      <Head>
+        <title>Movie APP</title>
+      </Head>
+      <Navigation />
       <App />
-      {/* <Movie /> */}
-    </div>
+    </>
   )
 }
