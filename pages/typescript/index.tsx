@@ -1,3 +1,4 @@
+import React from 'react';
 import App from '../../Components/App/index';
 
 const typescript = () : JSX.Element => {
