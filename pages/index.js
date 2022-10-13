@@ -70,6 +70,6 @@
 
 import App from '../src/App';
 
-export default function index(){
+export default () =>{
   return <App />
 }
