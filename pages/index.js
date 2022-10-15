@@ -68,8 +68,8 @@
 //   )
 // }
 
-import App from '../src/App';
+import ExpensesApp from '../src/ExpensesApp';
 
 export default () =>{
-  return <App />
+  return <ExpensesApp />
 }

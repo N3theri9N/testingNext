@@ -2,7 +2,7 @@ import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import { useState } from 'react';
 
-const App = () => {
+const ExpensesApp = () => {
 
   const [expenses, setExpenses] = useState(
     [
@@ -27,4 +27,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default ExpensesApp;

@@ -1,8 +1,7 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import './index.css';
-import GoalApp from './GoalApp';
+import './ExpensesIndex.css';
+import ExpensesApp from './ExpensesApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<GoalApp />);
+root.render(<ExpensesApp />);
