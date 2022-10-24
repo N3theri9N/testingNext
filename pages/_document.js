@@ -8,6 +8,7 @@ class Doc extends Document {
         <Head /> 
         <div id="backdrop-root"></div>
         <div id="overlay-root"></div>
+        <div id="overlays"></div>
         <Main />
         <NextScript />
       </body>
