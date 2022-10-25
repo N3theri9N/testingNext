@@ -17,8 +17,11 @@ import ReactDOM from 'react-dom/client';
 // import App from './FoodOrderApp';
 // import './FoodOrderApp.css';
 
-import App from './MovieApp';
-import './MovieApp.css';
+// import App from './MovieApp';
+// import './MovieApp.css';
+
+// import App from "./CounterApp";
+ import App from "./TasksApp";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
