@@ -21,7 +21,10 @@ import ReactDOM from 'react-dom/client';
 // import './MovieApp.css';
 
 // import App from "./CounterApp";
- import App from "./TasksApp";
+// import App from "./TasksApp";
+
+import App from "./BasicFormApp";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
