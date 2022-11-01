@@ -19,8 +19,8 @@ import ReactDOM from 'react-dom/client';
 // import App from './BackgroundApp';
 
 // # section 11, 17
-import App from './FoodOrderApp';
-import './FoodOrderApp.css';
+// import App from './FoodOrderApp';
+// import './FoodOrderApp.css';
 
 // # section 14
 // import App from './MovieApp';
@@ -33,6 +33,8 @@ import './FoodOrderApp.css';
 // # section 16
 // import App from "./BasicFormApp";
 
+// # section 18
+import App from "./ReduxApp";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
