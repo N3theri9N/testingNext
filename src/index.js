@@ -34,7 +34,10 @@ import ReactDOM from 'react-dom/client';
 // import App from "./BasicFormApp";
 
 // # section 18
-import App from "./ReduxApp";
+//import App from "./ReduxApp";
+
+// # section 19
+import App from "./ShoppingAppProvider"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
