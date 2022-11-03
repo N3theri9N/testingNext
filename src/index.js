@@ -37,7 +37,10 @@ import ReactDOM from 'react-dom/client';
 //import App from "./ReduxApp";
 
 // # section 19
-import App from "./ShoppingAppProvider"
+//import App from "./ShoppingAppProvider"
+
+// # section 22
+import App from "./AuthenticationAppProvider";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -48,5 +51,5 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // </AuthContextProvider>
 // );
 root.render(
-  <App />
+  <App /> 
 )
