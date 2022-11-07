@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 //import { AuthContextProvider } from './store/Login/auth-context';
 
 //import './index.css';
@@ -40,7 +41,11 @@ import ReactDOM from 'react-dom/client';
 //import App from "./ShoppingAppProvider"
 
 // # section 22
-import App from "./AuthenticationAppProvider";
+// import App from "./AuthenticationAppProvider";
+
+// #section 20
+// import App from './RouterApp';
+import App from './QuotesApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -51,5 +56,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // </AuthContextProvider>
 // );
 root.render(
-  <App /> 
+  <BrowserRouter>
+    <App /> 
+  </BrowserRouter>
 )
