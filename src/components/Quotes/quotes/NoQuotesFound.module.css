@@ -1,0 +1,50 @@
+.noquotes {
+  height: 20rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noquotes p {
+  color: #262c2c;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+
+.btn {
+  text-decoration: none;
+  background-color: teal;
+  color: white;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid teal;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #11acac;
+  border-color: #11acac;
+}
+
+.btn--flat {
+  cursor: pointer;
+  font: inherit;
+  color: teal;
+  border: none;
+  background-color: none;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+}
+
+.btn--flat:hover,
+.btn--flat:active {
+  background-color: teal;
+  color: white;
+}

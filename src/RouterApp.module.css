@@ -1,0 +1,11 @@
+
+.main main {
+  margin-top: 7rem;
+  text-align: center;
+}
+.main h1,
+.main h2,
+.main h3,
+.main p {
+  color: #042b5f;
+}
