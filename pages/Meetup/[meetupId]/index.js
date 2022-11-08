@@ -5,10 +5,10 @@ import Head from "next/head";
 function MeetupDetail(props) {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>{props.meetupData.title}</title>
         <meta name="description" content={props.meetupData.description} />
-      </Head>
+      </Head> */}
       <MeetupDetails
         title={props.meetupData.title}
         image={props.meetupData.image}
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 
   client.close();
   return {
-    fallback: false,
+    fallback: 'blocking ',
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),

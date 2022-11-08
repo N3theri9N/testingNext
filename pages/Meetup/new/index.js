@@ -21,13 +21,13 @@ function NewMeetupPage() {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Add a New Meetups</title>
         <meta
           name="description"
           content="Add your own meetups and create amazing networking opportunities."
         />
-      </Head>
+      </Head> */}
       <NewMeetupForm onAddMeetup={addMeetupHandler} />
     </>
   );

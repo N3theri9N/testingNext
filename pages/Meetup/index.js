@@ -25,13 +25,13 @@ import MeetupList from "../../src/components/MeetUp/meetups/MeetupList";
 function HomePage(props) {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>NextJS Meetups</title>
         <meta
           name="description"
           content="Browse a huge list of highly active React meetups"
         />
-      </Head>
+      </Head> */}
       <MeetupList meetups={props.meetups} />
     </>
   );
