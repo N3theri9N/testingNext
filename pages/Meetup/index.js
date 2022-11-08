@@ -1,5 +1,5 @@
 import { MongoClient } from "mongodb";
-import Head from "next/head";
+// import Head from "next/head";
 
 import MeetupList from "../../src/components/MeetUp/meetups/MeetupList";
 
