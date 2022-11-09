@@ -45,10 +45,12 @@ import { BrowserRouter } from 'react-router-dom';
 
 // #section 20
 // import App from './RouterApp';
-import App from './QuotesApp';
+// import App from './QuotesApp';
+
+// #section 24
+import App from './RAnimationApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
 
 // root.render(
 // <AuthContextProvider>
