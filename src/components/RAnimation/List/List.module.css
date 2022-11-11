@@ -20,3 +20,21 @@
 .ListItem:active {
     background-color: #ccc;
 }
+
+.FadeEnter {
+    opacity: 0;
+}
+
+.FadeEnterActive {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.FadeExit {
+    opacity: 1;
+}
+
+.FadeExitActive {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
