@@ -48,7 +48,10 @@ import { BrowserRouter } from 'react-router-dom';
 // import App from './QuotesApp';
 
 // #section 24
-import App from './RAnimationApp';
+// import App from './RAnimationApp';
+
+// #section 25
+import App from './ProductsApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
